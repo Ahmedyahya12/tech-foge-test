@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechForge FST — Club Tech (Mauritanie)</title>
+  <meta name="description" content="TechForge FST : club tech de la Faculté des Sciences et Techniques (FST) — Mauritanie. Ateliers, projets, communauté." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- ===== Top Bar ===== -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#home" aria-label="Aller à l'accueil">
+        <span class="brand-mark" aria-hidden="true">⚙️</span>
+        <span class="brand-text">
+          <span class="brand-name">TechForge</span>
+          <span class="brand-sub">FST • Mauritanie</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#about">À propos</a>
+        <a href="#tracks">Pôles</a>
+        <a href="#events">Événements</a>
+        <a href="#projects">Projets</a>
+        <a href="#join" class="btn small">Rejoindre</a>
+      </nav>
+
+      <button class="icon-btn" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main id="home" class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <div class="pill">
+          <span class="dot"></span>
+          Club Tech — Faculté des Sciences et Techniques (FST)
+        </div>
+
+        <h1>Construire. Apprendre. Partager.<br><span class="accent">Ensemble à la FST.</span></h1>
+
+        <p class="lead">
+          TechForge FST est un club technologique en Mauritanie : ateliers pratiques, projets réels,
+          mentorat, et une communauté qui progresse vite.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#join">Devenir membre</a>
+          <button class="btn ghost" id="themeBtn" type="button">Mode clair/sombre</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num" id="membersCount">—</div>
+            <div class="stat-label">membres (démo)</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" id="eventsCount">—</div>
+            <div class="stat-label">événements / semestre</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label">open learning</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="card">
+          <div class="card-head">
+            <span class="chip">Prochain atelier</span>
+            <span class="muted" id="nextEventDate">—</span>
+          </div>
+
+          <h3 class="card-title" id="nextEventTitle">—</h3>
+          <p class="muted" id="nextEventDesc">—</p>
+
+          <div class="card-actions">
+            <button class="btn small" id="addToCalendarBtn" type="button">Ajouter au calendrier</button>
+            <a class="btn small ghost" href="#events">Voir tous</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="mini">
+            <h4>Annonce rapide</h4>
+            <p class="muted">Inscris-toi aux ateliers et propose un projet !</p>
+
+            <form id="newsletterForm" class="newsletter">
+              <input id="newsletterEmail" type="email" placeholder="Email (démo)" required />
+              <button class="btn small primary" type="submit">S'inscrire</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="section-head">
+        <h2>À propos</h2>
+        <p class="muted">
+          Notre mission : rendre la tech accessible aux étudiants FST, avec du pratique et du sérieux.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="panel">
+          <h3>Ateliers</h3>
+          <p class="muted">Web, mobile, IA, sécurité, Git/GitHub, algo… avec des mini-projets.</p>
+        </article>
+        <article class="panel">
+          <h3>Projets</h3>
+          <p class="muted">Des projets qui ressemblent au monde réel : produit, UX, API, déploiement.</p>
+        </article>
+        <article class="panel">
+          <h3>Communauté</h3>
+          <p class="muted">Mentorat, entraide, sessions de révision, et préparation aux stages.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Tracks ===== -->
+    <section id="tracks" class="section">
+      <div class="section-head">
+        <h2>Pôles (Tracks)</h2>
+        <p class="muted">Choisis un pôle et avance avec une roadmap claire.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="panel">
+          <div class="panel-top">
+            <span class="badge">Web</span>
+            <span class="muted">React • Django/FastAPI</span>
+          </div>
+          <ul class="list">
+            <li>HTML/CSS/JS propre + accessibilité</li>
+            <li>React (hooks, state, routing)</li>
+            <li>API REST + Auth + déploiement</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <div class="panel-top">
+            <span class="badge">Data & IA</span>
+            <span class="muted">Python • ML</span>
+          </div>
+          <ul class="list">
+            <li>Data cleaning + visualisation</li>
+            <li>Modèles ML (régression, classification)</li>
+            <li>Démo/mini-app (Streamlit/FastAPI)</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <div class="panel-top">
+            <span class="badge">Cyber</span>
+            <span class="muted">Crypto • Web security</span>
+          </div>
+          <ul class="list">
+            <li>Notions : AES/RSA, hash, signature</li>
+            <li>OWASP Top 10 + tests</li>
+            <li>Bonnes pratiques backend</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <div class="panel-top">
+            <span class="badge">Mobile</span>
+            <span class="muted">Flutter • Android</span>
+          </div>
+          <ul class="list">
+            <li>UI, state, navigation</li>
+            <li>Connexion API + stockage local</li>
+            <li>Publication & bonnes pratiques</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Events ===== -->
+    <section id="events" class="section">
+      <div class="section-head row">
+        <div>
+          <h2>Événements</h2>
+          <p class="muted">Calendrier du semestre (exemple). Tu peux modifier dans <code>data.js</code>.</p>
+        </div>
+        <div class="filters">
+          <input id="eventSearch" type="search" placeholder="Rechercher (ex: React, Git...)" />
+          <select id="eventTrack">
+            <option value="all">Tous</option>
+            <option value="web">Web</option>
+            <option value="data">Data & IA</option>
+            <option value="cyber">Cyber</option>
+            <option value="mobile">Mobile</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="eventsList" class="cards"></div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Projets du club</h2>
+        <p class="muted">Quelques idées de projets (exemples). Remplace par vos vrais projets.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="panel">
+          <h3>Plateforme PFE</h3>
+          <p class="muted">Gestion projets étudiants/encadrants : suivi, dépôt, évaluations, dashboard.</p>
+          <span class="tag">Web</span>
+        </article>
+        <article class="panel">
+          <h3>Mini LMS FST</h3>
+          <p class="muted">Cours, quiz, devoirs, notifications et progression des étudiants.</p>
+          <span class="tag">Web</span>
+        </article>
+        <article class="panel">
+          <h3>Dataset Mauritanie</h3>
+          <p class="muted">Collecte + analyse : visualisations, corrélations, dashboard, API.</p>
+          <span class="tag">Data</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Join ===== -->
+    <section id="join" class="section">
+      <div class="section-head">
+        <h2>Rejoindre TechForge</h2>
+        <p class="muted">Formulaire démo (pas d'envoi serveur). Tu peux connecter à un backend plus tard.</p>
+      </div>
+
+      <div class="join-grid">
+        <form id="joinForm" class="panel form">
+          <div class="field">
+            <label for="fullName">Nom complet</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Ahmed Yahya" required />
+          </div>
+
+          <div class="field">
+            <label for="level">Niveau</label>
+            <select id="level" name="level" required>
+              <option value="">Choisir...</option>
+              <option>L1</option>
+              <option>L2</option>
+              <option>L3</option>
+              <option>M1</option>
+              <option>M2</option>
+              <option>Autre</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="track">Pôle</label>
+            <select id="track" name="track" required>
+              <option value="">Choisir...</option>
+              <option value="web">Web</option>
+              <option value="data">Data & IA</option>
+              <option value="cyber">Cyber</option>
+              <option value="mobile">Mobile</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="motivation">Motivation</label>
+            <textarea id="motivation" name="motivation" rows="4" placeholder="Pourquoi tu veux rejoindre ?" required></textarea>
+          </div>
+
+          <button class="btn primary" type="submit">Envoyer (démo)</button>
+          <p class="muted tiny">Astuce : pour connecter à Google Form, remplace cette démo par un lien.</p>
+        </form>
+
+        <aside class="panel">
+          <h3>Comment on fonctionne</h3>
+          <ul class="list">
+            <li>1 atelier / semaine (ou toutes les 2 semaines)</li>
+            <li>Roadmap simple par pôle</li>
+            <li>Projets en équipe + code review</li>
+            <li>Publication des ressources (Notion/GitHub)</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h4>Liens (à personnaliser)</h4>
+          <div class="links">
+            <a class="link" href="#" id="githubLink">GitHub</a>
+            <a class="link" href="#" id="whatsappLink">WhatsApp</a>
+            <a class="link" href="#" id="emailLink">Email</a>
+          </div>
+          <p class="muted tiny">Modifie ces liens dans <code>data.js</code>.</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© <span id="year"></span> TechForge FST</span>
+        <a href="#home" class="muted">Retour en haut ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
